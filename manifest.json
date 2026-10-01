@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+
+  "name": "UNC Cupos",
+
+  "version": "1.0.0",
+
+  "description": "Monitor de cupos de materias de Guaraní UNC",
+
+  "permissions": [
+    "storage",
+    "notifications",
+    "alarms",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "https://autogestion.guarani.unc.edu.ar/*"
+  ],
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://autogestion.guarani.unc.edu.ar/*"
+      ],
+
+      "js": [
+        "monitoreo.js",
+        "inscripcion.js",
+        "resultadoInscripcion.js",
+        "content.js"
+      ]
+    }
+  ]
+}

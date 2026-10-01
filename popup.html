@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>UNC Cupos</title>
+
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    #estado {
+      margin-top: 15px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h2>🟢 UNC Cupos</h2>
+
+  <label>
+    Comisión a monitorear:
+  </label>
+
+  <input
+    id="comision"
+    type="text"
+    placeholder="Ej: Cat. B - 13 - TESIS"
+  >
+
+  <button id="iniciar">
+    Iniciar monitoreo
+  </button>
+
+  <div id="estado">
+    Estado: detenido
+  </div>
+
+  <script src="popup.js"></script>
+
+</body>
+
+</html>
